@@ -87,15 +87,26 @@
 .impact-layout.cover h1 { font-size: 87px; line-height: 0.96; letter-spacing: -5px; max-width: 660px; position: relative; z-index: 1; margin-top: 45px; }
 .impact-layout.cover .cover-ai { display: block; font-size: 104px; margin-bottom: 10px; }
 .impact-layout.cover .cover-byline { position: absolute; bottom: 45px; left: 54px; font-size: 20px; }
-.impact-layout.cover .perspectives { position: absolute; right: -15px; top: 113px; transform: rotate(-15deg) scale(0.9); }
-.perspectives { width: 380px; height: 350px; position: relative; }
-.lens { position: absolute; width: 212px; height: 212px; border: 22px solid; border-radius: 50%; mix-blend-mode: multiply; }
-.lens-1 { top: 0; left: 88px; border-color: var(--product); }
-.lens-2 { top: 70px; left: 165px; border-color: var(--leadership); }
-.lens-3 { top: 150px; left: 130px; border-color: var(--opensource); }
-.lens-4 { top: 150px; left: 30px; border-color: var(--author); }
-.lens-5 { top: 55px; left: 0; border-color: var(--consumer); }
-.lens-center { position: absolute; top: 121px; left: 140px; font-size: 90px; color: var(--ink); font-weight: 600; }
+.impact-layout.cover .perspectives { position: absolute; right: -5px; top: 100px; transform: rotate(-12deg) scale(0.9); }
+.perspectives { width: 400px; height: 400px; position: relative; }
+.lens {
+  position: absolute;
+  top: 14px;
+  left: 114px;
+  width: 172px;
+  height: 240px;
+  box-sizing: border-box;
+  border: 20px solid;
+  border-radius: 50%;
+  transform-origin: 86px 186px;
+  transform: rotate(var(--angle));
+  mix-blend-mode: multiply;
+}
+.lens-1 { --angle: 0deg; border-color: var(--product); }
+.lens-2 { --angle: 72deg; border-color: var(--leadership); }
+.lens-3 { --angle: 144deg; border-color: var(--opensource); }
+.lens-4 { --angle: 216deg; border-color: var(--author); }
+.lens-5 { --angle: 288deg; border-color: var(--consumer); }
 .impact-layout .roster { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr 1fr; gap: 13px; margin-top: 53px; }
 .impact-layout .roster div { border-top: 10px solid var(--accent); padding-top: 17px; }
 .impact-layout .roster strong { display: block; font-size: 22px; line-height: 1.15; min-height: 58px; }
