@@ -50,13 +50,19 @@ class: dark
 
 # Who’s excited about AI?
 
+<div v-click="1">
+
 <p class="big-line">Who’s worried?</p>
 
 <p class="bottom-note">You can keep your hand up for both.</p>
 
+</div>
+
 <!--
 00:30–01:15 · 0:45
-Ask each question separately. Leave a real pause for hands.
+Ask who’s excited about AI. Leave a real pause for hands.
+
+[click] Reveal “Who’s worried?” and “You can keep your hand up for both” together. Ask the second question and pause again.
 “Those are allowed to be the same people.” Don't assume how the room responds.
 Some people have had useful experiences; others have had AI imposed on them. Some have both.
 The aim is to give those experiences room without sorting the audience into believers and skeptics.
