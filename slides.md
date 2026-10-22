@@ -76,7 +76,7 @@ Bridge: my own answer changes with the responsibility I'm holding.
 <div>
 <p class="eyebrow">Hi, I’m Corbin</p>
 
-# I’m conflicted.<br>I use AI a lot as:
+# I’m conflicted.<br>I use AI a lot.
 
 <div class="bio-lines">
 <p>Previously a <strong>VP of Engineering</strong></p>
@@ -137,7 +137,7 @@ class: persona product
 
 <p class="persona-thought">I can build more.</p>
 
-<p class="persona-question">I can understand what I ship.</p>
+<p class="persona-question">Can I still understand what I ship?</p>
 
 <!--
 03:00–03:30 · 0:30
@@ -233,7 +233,7 @@ class: persona leadership
 
 <p class="persona-thought">I can help my team deliver more.</p>
 
-<p class="persona-question">I can keep my team in the decision.</p>
+<p class="persona-question">Can I still keep my team in the decision?</p>
 
 <!--
 07:00–07:30 · 0:30
@@ -314,7 +314,7 @@ class: persona opensource
 
 <p class="persona-thought">I can contribute more.</p>
 
-<p class="persona-question">I can make my contributions easier to trust.</p>
+<p class="persona-question">Can I still meet the project’s quality bar?</p>
 
 <!--
 11:00–11:30 · 0:30
@@ -417,7 +417,7 @@ class: persona author
 
 <p class="persona-thought">I can explore more ideas.</p>
 
-<p class="persona-question">I can stand behind every word.</p>
+<p class="persona-question">Can I still stand behind every word?</p>
 
 <!--
 16:00–16:30 · 0:30
@@ -500,7 +500,7 @@ class: persona consumer
 
 <p class="persona-thought">I can get help with unfamiliar tasks.</p>
 
-<p class="persona-question">I can choose what’s worth the cost.</p>
+<p class="persona-question">Can I still decide what’s worth the cost?</p>
 
 <!--
 20:00–20:30 · 0:30
