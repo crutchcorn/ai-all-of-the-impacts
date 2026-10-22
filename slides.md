@@ -121,7 +121,7 @@ The previous VP of Engineering role and frequent AI use statement were supplied 
 <!--
 02:15–03:00 · 0:45
 These aren't five kinds of people. They're responsibilities one person can have in the same day.
-Each perspective follows the same path: the opportunity, the trap, the reality of falling into it, and how to fix it.
+Each perspective follows the same path: the opportunity, the reality that makes it difficult, the tempting reaction, and how to fix that trap.
 The boundaries are not identical. A private prototype, a public contribution, and a published claim affect different people.
 Start with the perspective most familiar to this room: building software.
 -->
@@ -167,25 +167,7 @@ class: product
 Hypothetical example: a product engineer wants to compare two ways of presenting validation errors. Generate throwaway prototypes, try them with a keyboard, and check whether users understand the messages.
 That is a useful feedback loop if we actually inspect what we get.
 PERSONAL STORY SLOT: replace or supplement this example with a real task where AI helped you explore. Name the task, what you checked, and what you kept. No time-saved number unless you have one.
-Bridge: the prototype looking convincing can make the next mistake very tempting.
--->
-
----
-class: dark trap product
----
-
-<p class="eyebrow">The trap</p>
-
-# “I can build anything.<br>I don’t need to<br><span class="highlight">read the code.</span>”
-
-<p class="subline">The code still becomes someone’s maintenance job.</p>
-
-<!--
-04:15–05:00 · 0:45
-This is a temptation to examine, not a quotation from a real person.
-A convincing demo can make understanding the implementation feel optional. Generated tests may reinforce that confidence if they repeat the implementation's assumption.
-Reading means building a model of the data flow and failure modes; staring at every line is not itself a guarantee.
-Bridge: what does that skipped understanding cost when the happy path isn't the path a user takes?
+Bridge: getting a prototype is one kind of work. Understanding what it actually does is another.
 -->
 
 ---
@@ -194,7 +176,7 @@ class: product
 
 <p class="eyebrow">The reality</p>
 
-# A working demo can still<br>expose someone’s data.
+# Generating code is fast.<br>Understanding it takes work.
 
 <div class="code-example">
 <div role="group" aria-label="Illustrative code: an invoice is found only by its ID">
@@ -209,14 +191,34 @@ function getInvoice(id) {
 <div><h2>Whose invoice?</h2><p>A valid ID doesn’t prove the caller can access it.</p><p>The happy path doesn’t reveal the missing boundary.</p></div>
 </div>
 
-<p class="bottom-note">The first person to discover the gap could be a user.</p>
+<p class="bottom-note">A convincing demo still leaves questions to investigate.</p>
 
 <!--
-05:00–06:00 · 1:00
+04:15–05:15 · 1:00
 Illustrative pseudocode, not an implementation or a vulnerability report. The example deliberately omits authorization. It could have been written by a person or a model.
-A lookup can return the expected invoice in a demo and still expose it to a different account. A correct design might scope the query to the account or enforce authorization elsewhere; the snippet alone doesn't establish that boundary.
-The consequence of skipping understanding is that the engineer may not know which assumption failed, who is affected, or how to repair it. The saved review time can become an incident and someone else's lost trust.
-PERSONAL STORY SLOT: replace this hypothetical with an actual moment when a plausible implementation needed correction. Keep it bounded; don't generalize one incident into a failure rate.
+The lookup returns an invoice. Does the caller have access to it? A correct design might scope the query to the account or enforce authorization elsewhere; someone still needs to find and verify that boundary.
+That investigation takes context and attention even when generating the first version was quick. Tests can repeat the implementation's assumptions, so a passing test doesn't answer every question either.
+PERSONAL STORY SLOT: replace this hypothetical with a real task where a plausible implementation needed investigation. Keep it bounded; don't invent a failure rate.
+Bridge: when producing code feels easy and understanding it feels slow, it's tempting to skip the slow part.
+-->
+
+---
+class: dark trap product
+---
+
+<p class="eyebrow">The trap</p>
+
+# “I can build anything.<br>I don’t need to<br><span class="highlight">read the code.</span>”
+
+<p class="subline">The code still becomes someone’s maintenance job.</p>
+
+<!--
+05:15–06:00 · 0:45
+This is a temptation to examine, not a quotation from a real person.
+The demo works and the tests pass. After seeing how much context a review needs, I might decide that understanding is optional and move on to the next feature.
+But somebody still has to trace the behavior when a different account reaches that invoice. Skipping the investigation can turn saved review time into an incident and lost trust.
+Reading means building a model of data flow and failure modes; staring at every line is not itself a guarantee.
+Bridge: spend some of that drafting speed on understanding the change before shipping it.
 -->
 
 ---
@@ -281,6 +283,31 @@ Hypothetical: use a prototype to make a vague request discussable, then let the 
 A team might spend more time waiting on a decision than writing code. Generating code faster won't remove that wait.
 Ask what improved for users and what new work appeared: review load, defects, support, maintenance, and time to learn.
 Avoid ranking people by generated lines, prompts, or tool adoption. Those are easy to increase without improving outcomes.
+Bridge: a quicker prototype still leaves questions that need the team’s context.
+-->
+
+---
+class: leadership
+---
+
+<p class="eyebrow">The reality</p>
+
+# A demo leaves<br>the hard questions open.
+
+<div class="two-up">
+<div><h2>The dashboard works</h2><p>The chart renders.<br>The sample data looks right.<br>The idea is easy to show.</p></div>
+<div><h2>The team needs to know</h2><p>Who can see the data?<br>How does it stay fresh?<br>Who supports it?</p></div>
+</div>
+
+<p class="bottom-note">Answering those questions takes context and time.</p>
+
+<!--
+08:15–09:15 · 1:00
+Hypothetical: a leader builds a dashboard over the weekend. It makes a vague request easy to discuss, but the team asks about permissions, data freshness, accessibility, and support.
+Those questions are part of making the feature useful in production. The demo doesn't resolve them, and the people asking them may also be responsible for other commitments.
+From the leader's seat, that can feel frustrating: the visible feature took an afternoon, yet delivering it responsibly still needs coordination and judgment.
+PERSONAL STORY SLOT: replace this with a real leadership example where involving the team revealed work you hadn't considered. Don't fabricate a story about bypassing them.
+Bridge: that mismatch can make “I'll just finish this myself” feel like the fastest route.
 -->
 
 ---
@@ -294,34 +321,12 @@ class: dark trap leadership
 <p class="subline">A solo demo can quietly become a team commitment.</p>
 
 <!--
-08:15–09:00 · 0:45
-This is the leadership version of overconfidence. The danger isn't a manager prototyping; it's bypassing the people with context and then assigning them ownership of the result.
-The prototype makes it tempting to treat the implementation as decided and the remaining work as small.
-Trust includes allowing someone to say the AI-built approach is wrong, or that a different priority matters more.
-Bridge: the manager finishes a demo. What has the team just been handed?
--->
-
----
-class: leadership
----
-
-<p class="eyebrow">The reality</p>
-
-# My shortcut becomes<br>the team’s commitment.
-
-<div class="two-up">
-<div><h2>I promised a dashboard</h2><p>A weekend prototype.<br>A convincing demo.<br>A delivery date.</p></div>
-<div><h2>They inherit the rest</h2><p>Permissions. Fresh data.<br>Accessibility. Support.<br>A deadline they didn’t choose.</p></div>
-</div>
-
-<p class="bottom-note">The work didn’t disappear. The team lost a say in it.</p>
-
-<!--
-09:00–10:00 · 1:00
-Hypothetical: a leader builds a dashboard over the weekend and promises it to a customer. The team inherits permissions, data freshness, accessibility, support, and the promised deadline.
-Now the people with production context have to reconcile a promise with reality. They may have to interrupt planned work, rewrite the prototype, or explain why the deadline can't hold.
-The demo may still be useful. The harm is making a commitment before the team has a voice; it turns their judgment into an obstacle to an already-announced plan.
-PERSONAL STORY SLOT: replace this with a real leadership example where involving the team changed your understanding. Don't fabricate a confession about bypassing them.
+09:15–10:00 · 0:45
+The temptation is to treat the team's unanswered questions as delays I can bypass with more prompting.
+A manager can prototype usefully. The trap is deciding the implementation and promising a delivery date before the people responsible for production have a say.
+Now they inherit permissions, support, maintenance, and a deadline they didn't choose. My apparent shortcut becomes their commitment.
+Trust includes allowing someone to challenge the approach or say a different priority matters more.
+Bridge: bring the prototype into a shared decision before turning it into a promise.
 -->
 
 ---
@@ -385,6 +390,31 @@ AI can help explore a reproduction, compare a patch, or draft a test. The contri
 A useful PR description gives the symptom, cause, change, and evidence. It doesn't need a long generated essay.
 Respond to the maintainer's actual question in your own understanding. Don't paste a model's confident reply to a question you haven't investigated.
 Some projects restrict AI use. Respect those boundaries; this talk is not permission to ignore them.
+Bridge: that is what useful assistance can look like. The person reviewing a contribution may receive something very different.
+-->
+
+---
+class: opensource
+---
+
+<p class="eyebrow">The reality</p>
+
+# Generating a patch is cheap.<br>Reviewing it is still work.
+
+<div class="two-up">
+<div><h2>What can arrive</h2><p>An unchecked patch.<br>A confident explanation.<br>A reply that misses the question.</p></div>
+<div><h2>What it asks of us</h2><p>Reproduce the failure.<br>Verify the claims.<br>Ask for clarification again.</p></div>
+</div>
+
+<p class="bottom-note">Untrusted text can also try to redirect an agent.</p>
+
+<!--
+12:30–13:45 · 1:15
+The contributor can generate a patch and explanation quickly. The maintainer still has to establish whether the failure is real, the fix works, and the contributor understands it.
+Define “slop” here as unchecked material that imposes cleanup on someone else, not every AI-assisted contribution. A long generated reply that doesn't address a review question adds another round of work.
+The security concern is separate but real: an issue, repository file, or retrieved page can contain instructions intended to redirect an agent. Its permissions determine what it can reach. The fix slide's notes include a controlled demonstration from Invariant Labs.
+PERSONAL STORY SLOT: a real contribution or communication example, anonymized where appropriate. Don't infer AI use from writing style alone.
+Bridge: after enough cleanup and unhelpful replies, it's understandable to want to reject the whole category.
 -->
 
 ---
@@ -398,35 +428,11 @@ class: dark trap opensource
 <p class="subline">The exhaustion is real.<br>Useful assistance still needs an accountable contributor.</p>
 
 <!--
-12:30–13:15 · 0:45
-Don't dismiss maintainer exhaustion. Define “slop” here as unchecked material that imposes cleanup on someone else, not a synonym for every AI-assisted contribution.
-A maintainer can set a high quality bar and decline work they don't have capacity to review. Nobody owes a stranger a debugging session.
-The temptation is turning that experience into a universal claim that no useful assistance is possible. A small verified reproduction may be valuable even if a tool helped prepare it.
-PERSONAL STORY SLOT: a real contribution or communication example, anonymized where appropriate. Avoid attributing AI use to someone based only on their writing style.
--->
-
----
-class: opensource
----
-
-<p class="eyebrow">The reality</p>
-
-# Dismissing every use<br>can discard useful help.
-
-<div class="two-up">
-<div><h2>What can be lost</h2><p>A checked reproduction.<br>A useful test.<br>A clearer explanation.</p></div>
-<div><h2>What still takes work</h2><p>Verification.<br>Review.<br>Answering the actual question.</p></div>
-</div>
-
-<p class="bottom-note">A universal claim and a project’s policy are different things.</p>
-
-<!--
-13:15–14:30 · 1:15
-Return to the reproduction from the opportunity slide. If I rule out every kind of assistance, I may miss help narrowing a failure in my own investigation. That doesn't mean a maintainer must accept AI-assisted submissions or evaluate every patch.
-The pragmatic downside of the universal claim is discarding potentially useful, checked assistance while the investigation, verification, and communication work still needs doing.
-Distinguish “this cannot help anyone” from “our project does not accept it.” A project policy may be a practical response to review capacity, trust, or other concerns. Maintainers owe neither adoption nor an exception.
-The useful question within an allowed workflow is whether someone can reproduce the failure, explain the change, and answer the actual review question. A tool's involvement alone doesn't answer those questions.
-Bridge: keep the quality bar concrete, and constrain any automation you do choose to use.
+13:45–14:30 · 0:45
+The exhaustion is real. A maintainer can set a high quality bar, restrict AI use, and decline work they don't have capacity to review. Nobody owes a stranger a debugging session.
+The trap is turning that experience into the universal claim that no useful assistance is possible. That can rule out help with my own investigation, such as a small reproduction I've checked.
+Distinguish “this cannot help anyone” from “our project does not accept it.” A project policy does not require an exception just because someone used a tool successfully elsewhere.
+Bridge: in workflows that permit assistance, keep the evidence, ownership, and permissions explicit.
 -->
 
 ---
@@ -495,6 +501,31 @@ Treat generated questions, outlines, or critiques as suggestions to inspect.
 Hypothetical: ask a tool to challenge a draft's claim that a function is faster. It asks about the inputs. Revisit the actual benchmark and narrow the sentence to what it supports. The tool helped notice a gap; the author still did the verification. This slide reports no real benchmark result.
 Generated references are leads until you've opened them. A real source can also be cited for something it never claims.
 PERSONAL STORY SLOT: a real editing or research moment where feedback helped you notice a gap. The tool doesn't need to have written the paragraph to be useful.
+Bridge: feedback can help, but the next suggestion may be confidently wrong or sound nothing like me.
+-->
+
+---
+class: author
+---
+
+<p class="eyebrow">The reality</p>
+
+# Fluent prose can be wrong.<br>It can also sound unlike me.
+
+<div class="two-up">
+<div><h2>Accuracy</h2><p>A citation that doesn’t support the claim.</p><p>A caveat that disappears in the rewrite.</p></div>
+<div><h2>Voice</h2><p>A personal explanation becomes generic.</p><p>A sentence I’d never say aloud.</p></div>
+</div>
+
+<p class="bottom-note">I still have to check the evidence and choose the words.</p>
+
+<!--
+17:15–18:15 · 1:00
+Return to the benchmark example. A suggested rewrite might turn a result on specific inputs into a sweeping claim that the function is faster. A citation can be real and still fail to support that claim.
+A rewrite can also smooth away a useful aside, uncertainty, or specific explanation until the paragraph no longer sounds like its author.
+These are possibilities to check, not claims about how often any tool fails. Generated critiques can be mistaken too. Smooth prose doesn't settle either accuracy or authenticity.
+That means assistance can create editing and verification work alongside whatever it saves.
+Bridge: when both credibility and voice feel at risk, “I must avoid all of it” can feel like the only way to protect them.
 -->
 
 ---
@@ -508,34 +539,12 @@ class: dark trap author
 <p class="subline">Choosing not to use it is valid.<br>Using it still leaves the claims and voice with you.</p>
 
 <!--
-17:15–18:00 · 0:45
+18:15–19:00 · 0:45
 A writer may decide the tradeoffs aren't worthwhile, or that the act of writing is the point. That is a valid choice.
-The trap is the absolute claim that any assistance necessarily erases authorship. Compare asking for counterarguments with publishing a generated personal story. Those are different choices.
+The trap is assuming any assistance necessarily erases authorship. Asking “faster on which inputs?” and publishing a generated personal story are very different uses.
+If I treat critique as ghostwriting, I can reject a useful challenge before considering it. Writing the sentence myself doesn't make the claim true; I still need evidence and scrutiny.
 Authenticity is not a detector score. Don't infer someone's process from polished or awkward prose.
-Bridge: if I treat every challenge to my draft as surrendering my voice, what useful questions am I ruling out?
--->
-
----
-class: author
----
-
-<p class="eyebrow">The reality</p>
-
-# Writing it myself<br>doesn’t make it true.
-
-<div class="two-up">
-<div><h2>What I can miss</h2><p>A question that exposes a gap.</p><p>“Faster on which inputs?”</p></div>
-<div><h2>What remains mine</h2><p>The evidence.<br>The conclusion.<br>The words.</p></div>
-</div>
-
-<p class="bottom-note">Receiving criticism doesn’t surrender authorship.</p>
-
-<!--
-18:00–19:00 · 1:00
-Return to the benchmark sentence. I can write “this function is faster” entirely myself and still overstate the evidence. Equating critique with ghostwriting can cause me to reject a useful challenge before considering it.
-The pragmatic downside is a missed chance to notice a gap; avoiding a tool doesn't remove the need for scrutiny. It does not follow that everyone must use AI. Human feedback is valuable, and deliberate non-use remains valid.
-An AI-generated challenge can also be wrong. Treat it as a question to investigate, not a correction to accept automatically.
-My experiences, conclusions, and factual claims still need grounding. A tool can ask about the inputs without becoming the author of the answer.
+Bridge: define a role for feedback while keeping the evidence, conclusions, and words yours.
 -->
 
 ---
@@ -598,6 +607,32 @@ These are possible uses, not guarantees of accuracy or accessibility. Try an unf
 People may enjoy new creative possibilities and still want to pay human artists for the work and relationship they value.
 Consumer fatigue is useful product feedback. A feature that needs endless prompting, checking, and explaining may be transferring effort to the user.
 Make the capability understandable and offer control over whether it is used.
+Bridge: even a useful feature can leave me with more to learn and more choices to weigh.
+-->
+
+---
+class: consumer
+---
+
+<p class="eyebrow">The reality</p>
+
+# The help comes<br>with more decisions.
+
+<div class="two-up">
+<div><h2>Another tool to learn</h2><p>When can I trust it?<br>What needs checking?<br>Where are the controls?</p></div>
+<div><h2>Wider costs to weigh</h2><p>Electricity, water, hardware.</p><p>Art: consent, credit, compensation.</p></div>
+</div>
+
+<p class="source">Environmental context: <a href="https://www.iea.org/reports/energy-and-ai">IEA, Energy and AI (2025)</a> · Impacts vary by infrastructure and use.</p>
+
+<!--
+21:15–22:15 · 1:00
+An unfamiliar-language menu sounds like a simple use. I still need to understand what the translation might miss and when to check it. New features can add decisions even when they promise convenience.
+There are wider concerns too: electricity, water, and hardware supply chains; consent, credit, and artists' livelihoods. A convincing output doesn't settle what I value about who made it.
+Environmental impacts vary with workload, location, and infrastructure. The IEA's data-centre totals include non-AI workloads; don't invent a universal per-prompt footprint.
+Source: https://www.iea.org/reports/energy-and-ai, §1.4.1 and Box 5.4. Artistic concerns are values to discuss, not a claim about the legal status of all training data.
+Providers and institutions control many of these choices. Consumers cannot resolve them all.
+Bridge: with all that to weigh, letting the defaults decide can feel like a relief.
 -->
 
 ---
@@ -611,35 +646,11 @@ class: dark trap consumer
 <p class="subline">I’m tired of learning another tool.</p>
 
 <!--
-21:15–22:00 · 0:45
+22:15–23:00 · 0:45
 Learning fatigue is reasonable. People shouldn't need to become AI specialists to use ordinary products.
-The trap is surrendering consequential choices to defaults because learning what the feature does feels like too much work. Fatigue is the context, not the mistake.
-A convenient output can encourage me to skip asking what was automated, what needs checking, or whether I wanted this feature involved at all.
-Bridge: convenience can hide decisions and tradeoffs that still affect me and other people.
--->
-
----
-class: consumer
----
-
-<p class="eyebrow">The reality</p>
-
-# Convenience can hide<br>choices and costs.
-
-<div class="two-up">
-<div><h2>My control</h2><p>What gets automated?<br>What needs checking?<br>Can I decline?</p></div>
-<div><h2>Wider costs</h2><p>Electricity, water, hardware.</p><p>Art: consent, credit, compensation.</p></div>
-</div>
-
-<p class="source">Environmental context: <a href="https://www.iea.org/reports/energy-and-ai">IEA, Energy and AI (2025)</a> · Impacts vary by infrastructure and use.</p>
-
-<!--
-22:00–23:00 · 1:00
-Letting defaults decide can mean accepting an unchecked result or an unwanted automated step without noticing. It can also obscure wider costs that matter to me. Fatigue does not cause those costs, and consumers do not control all of them.
-Environmental concerns include electricity, water, and hardware supply chains. The IEA's data-centre totals include non-AI workloads; impacts vary with workload, location, energy supply, and infrastructure. Avoid a universal “one prompt equals X bottles” claim.
-Source: https://www.iea.org/reports/energy-and-ai and the report's §1.4.1 and Box 5.4.
-Artistic value isn't settled by a convincing output. A consumer may care about consent, livelihood, process, and connection with a particular artist. These are values to discuss, not a claim about the legal status of all training data.
-Providers and institutions control infrastructure and procurement too. Don't place the whole burden on a tired person using an app.
+The trap is surrendering consequential choices to defaults because figuring out the feature feels like too much work. That can mean accepting an unchecked result or an unwanted automated step without noticing.
+Fatigue is the context, not the mistake, and consumers don't control every decision. Builders should reduce the burden instead of treating every failure to inspect a setting as the user's fault.
+Bridge: make the choice small enough to understand, and keep a usable way to decline.
 -->
 
 ---

@@ -2,7 +2,7 @@
 
 A rough **30-minute closing keynote for DevFest Central Valley 2026**, by Corbin Crutchley. The 35-slide deck follows five perspectives: product engineer, engineering leader, open-source maintainer, author/researcher, and consumer.
 
-The through-line: the same person can be excited and concerned for different reasons. Each perspective follows the same five slides: a persona titlecard, the opportunity, the trap, the reality (the practical consequence of the trap), and how to fix the trap.
+The through-line: the same person can be excited and concerned for different reasons. Each perspective follows the same five slides: a persona titlecard, the opportunity, the reality (the difficulty that makes the trap tempting), the trap, and how to fix the trap.
 
 ## Present or rehearse
 
