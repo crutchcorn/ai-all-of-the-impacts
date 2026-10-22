@@ -31,7 +31,7 @@ exportFilename: ai-all-of-the-impacts
 
 <Perspectives />
 
-<p class="cover-byline">Corbin Crutchley <span class="small">· they/them · @crutchcorn</span></p>
+<p class="cover-byline">Corbin Crutchley <span class="small">· @crutchcorn</span></p>
 
 <!--
 00:00–00:30 · 0:30
@@ -68,7 +68,7 @@ Bridge: my own answer changes with the responsibility I'm holding.
 
 <div class="bio">
 <div>
-<p class="eyebrow">Hi, I’m Corbin · they/them</p>
+<p class="eyebrow">Hi, I’m Corbin</p>
 
 # A few reasons<br>I’m conflicted.
 
@@ -82,7 +82,7 @@ Bridge: my own answer changes with the responsibility I'm holding.
 <img class="portrait" src="/corbin.png" alt="Corbin presenting onstage in a TanStack shirt" />
 </div>
 
-<p class="source"><a href="https://corbincrutchley.com/">corbincrutchley.com</a> · Biography verified October 2026</p>
+<p class="source"><a href="https://corbincrutchley.com/">corbincrutchley.com</a></p>
 
 <!--
 01:15–02:15 · 1:00
@@ -123,10 +123,12 @@ Start with the perspective most familiar to this room: building software.
 class: persona product
 ---
 
-<p class="eyebrow">Perspective 01 · Product software engineer</p>
+<p class="eyebrow">Perspective 01</p>
 <span class="persona-number" aria-hidden="true">01</span>
 
-# I can build<br>so much more.
+# Product<br>Software Engineer
+
+<p class="persona-thought">I can build so much more.</p>
 
 <p class="persona-question">Can I still explain what I’m shipping?</p>
 
@@ -191,9 +193,15 @@ class: product
 # “It runs” is the beginning.
 
 <div class="code-example">
-<pre aria-label="Illustrative code: an invoice is found only by its ID"><code>getInvoice(id) {
+<div role="group" aria-label="Illustrative code: an invoice is found only by its ID">
+
+```js
+function getInvoice(id) {
   return db.find(id)
-}</code></pre>
+}
+```
+
+</div>
 <div><h2>Whose invoice?</h2><p>A valid ID doesn’t prove the caller can access it.</p><p><strong>Review the boundary.<br>Test a different account.</strong></p></div>
 </div>
 
@@ -211,10 +219,12 @@ Bridge: now imagine watching that engineer from the manager's seat. The speed is
 class: persona leadership
 ---
 
-<p class="eyebrow">Perspective 02 · Engineering manager / leadership</p>
+<p class="eyebrow">Perspective 02</p>
 <span class="persona-number" aria-hidden="true">02</span>
 
-# We could do<br>so much more.
+# Engineering Manager<br>/ Leadership
+
+<p class="persona-thought">We could do so much more.</p>
 
 <p class="persona-question">Am I increasing capacity, or just expectations?</p>
 
@@ -290,10 +300,12 @@ Bridge: in open source, the person receiving that extra scope may be a volunteer
 class: persona opensource
 ---
 
-<p class="eyebrow">Perspective 03 · Open-source software engineer</p>
+<p class="eyebrow">Perspective 03</p>
 <span class="persona-number" aria-hidden="true">03</span>
 
-# Your quick PR.<br>Someone’s evening.
+# Open-source<br>Software Engineer
+
+<p class="persona-thought">Your quick PR. Someone’s evening.</p>
 
 <p class="persona-question">Did this contribution reduce work, or move it?</p>
 
@@ -391,10 +403,12 @@ Bridge: code has reviewers and tests. Writing has readers who may repeat a claim
 class: persona author
 ---
 
-<p class="eyebrow">Perspective 04 · Author / researcher</p>
+<p class="eyebrow">Perspective 04</p>
 <span class="persona-number" aria-hidden="true">04</span>
 
-# It sounds right.<br>Is it true?<br>Is it me?
+# Author / Researcher
+
+<p class="persona-thought">It sounds right. Is it true? Is it me?</p>
 
 <p class="persona-question">Readers trust the name on the work.</p>
 
@@ -472,10 +486,12 @@ Bridge: then we close the editor and become the person on the receiving end of a
 class: persona consumer
 ---
 
-<p class="eyebrow">Perspective 05 · Consumer</p>
+<p class="eyebrow">Perspective 05</p>
 <span class="persona-number" aria-hidden="true">05</span>
 
-# I want the benefit.<br>I have questions<br>about the cost.
+# Consumer
+
+<p class="persona-thought">I want the benefit.<br>I have questions about the cost.</p>
 
 <p class="persona-question">And I don’t want another thing to learn.</p>
 
