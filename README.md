@@ -47,7 +47,7 @@ The illustrative quotations express tempting positions; they are not attributed 
 
 ## Sources and assets
 
-The introduction was checked against [Corbin's website](https://corbincrutchley.com/) on October 22, 2026: Stord engineering leadership, previous product engineering roles, TanStack and Plop maintenance, books, and Playful Programming. The author/researcher lens describes technical research and writing, not a formal research appointment.
+The introduction draws on [Corbin's website](https://corbincrutchley.com/), checked October 22, 2026, for previous product engineering roles, TanStack and other project maintenance, books, and Playful Programming. Corbin supplied the previous VP of Engineering role and frequent AI use statement directly during revision. The author/researcher lens describes technical research and writing, not a formal research appointment.
 
 - [GitHub: responsible use of Copilot agents](https://docs.github.com/en/copilot/responsible-use/agents#7-limitations) — verification and human review guidance; not a measured failure rate.
 - [Invariant Labs: GitHub MCP Exploited (May 26, 2025)](https://invariantlabs.ai/blog/mcp-github-vulnerability) — a controlled prompt-injection demonstration involving public issues, private repository access, and public output. The displayed attack message is a simplified invented example.

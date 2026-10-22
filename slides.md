@@ -76,11 +76,11 @@ Bridge: my own answer changes with the responsibility I'm holding.
 <div>
 <p class="eyebrow">Hi, I’m Corbin</p>
 
-# A few reasons<br>I’m conflicted.
+# I’m conflicted.<br>I use AI a lot as:
 
 <div class="bio-lines">
-<p>Engineering leader at <strong>Stord</strong></p>
-<p>Maintainer of <strong>TanStack projects & Plop</strong></p>
+<p>Previously a <strong>VP of Engineering</strong></p>
+<p>Maintainer of <strong>TanStack projects & others</strong></p>
 <p>Author of <strong>The Framework Field Guide</strong></p>
 <p>Executive Director, <strong>Playful Programming</strong></p>
 </div>
@@ -93,11 +93,12 @@ Bridge: my own answer changes with the responsibility I'm holding.
 <!--
 01:15–02:15 · 1:00
 Keep this an introduction to the perspectives, not a full résumé.
-The live site lists Senior Engineering Manager at Stord, leading AI, AI enablement, and Platform teams. Earlier Staff Frontend Engineer roles at Descript and NWYC ground the product-engineering perspective.
+Ground the leadership perspective in the previous VP of Engineering role. Earlier Staff Frontend Engineer roles at Descript and NWYC ground the product-engineering perspective.
 The site lists lead maintenance of TanStack Form, Store, and Config, plus Plop. It lists The Framework Field Guide, The Art of Accessibility, and the early-access AI-internals book The Big Bot Builders.
 Playful Programming connects this to the people learning from our work.
 The author/researcher lens means researching and explaining technical ideas, not a formal research appointment.
 Source: https://corbincrutchley.com/ (#work, #open-source, #writing), checked 2026-10-22. Portrait from the same site; see README for attribution.
+The previous VP of Engineering role and frequent AI use statement were supplied directly by Corbin during revision.
 -->
 
 ---
