@@ -134,9 +134,9 @@ class: persona product
 
 # Product<br>Software Engineer
 
-<p class="persona-thought">I can build so much more.</p>
+<p class="persona-thought">I can build more.</p>
 
-<p class="persona-question">Can I still explain what I’m shipping?</p>
+<p class="persona-question">I can understand what I ship.</p>
 
 <!--
 03:00–03:30 · 0:30
@@ -230,9 +230,9 @@ class: persona leadership
 
 # Engineering Manager<br>/ Leadership
 
-<p class="persona-thought">We could do so much more.</p>
+<p class="persona-thought">I can help my team deliver more.</p>
 
-<p class="persona-question">Am I increasing capacity, or just expectations?</p>
+<p class="persona-question">I can keep my team in the decision.</p>
 
 <!--
 07:00–07:30 · 0:30
@@ -311,9 +311,9 @@ class: persona opensource
 
 # Open-source<br>Software Engineer
 
-<p class="persona-thought">Your quick PR. Someone’s evening.</p>
+<p class="persona-thought">I can contribute more.</p>
 
-<p class="persona-question">Did this contribution reduce work, or move it?</p>
+<p class="persona-question">I can make my contributions easier to trust.</p>
 
 <!--
 11:00–11:30 · 0:30
@@ -414,9 +414,9 @@ class: persona author
 
 # Author / Researcher
 
-<p class="persona-thought">It sounds right. Is it true? Is it me?</p>
+<p class="persona-thought">I can explore more ideas.</p>
 
-<p class="persona-question">Readers trust the name on the work.</p>
+<p class="persona-question">I can stand behind every word.</p>
 
 <!--
 16:00–16:30 · 0:30
@@ -497,9 +497,9 @@ class: persona consumer
 
 # Consumer
 
-<p class="persona-thought">I want the benefit.<br>I have questions about the cost.</p>
+<p class="persona-thought">I can get help with unfamiliar tasks.</p>
 
-<p class="persona-question">And I don’t want another thing to learn.</p>
+<p class="persona-question">I can choose what’s worth the cost.</p>
 
 <!--
 20:00–20:30 · 0:30
