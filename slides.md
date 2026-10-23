@@ -102,11 +102,12 @@ The previous VP of Engineering role and frequent AI use statement were supplied 
 -->
 
 ---
+class: content
 ---
 
 <p class="eyebrow">Same person. Different stakes.</p>
 
-# Five perspectives.<br>Five things to protect.
+# Five perspectives. Five things to protect.
 
 <div class="roster">
 <div style="--accent: var(--product)"><strong>Product<br>engineer</strong><p>Correctness</p></div>
@@ -147,7 +148,7 @@ The benefit is task-dependent. Don't invent a productivity multiplier.
 -->
 
 ---
-class: product
+class: product content
 ---
 
 <p class="eyebrow">The opportunity</p>
@@ -171,12 +172,12 @@ Bridge: the first version is only the start. What happens as the data, features,
 -->
 
 ---
-class: product
+class: product content
 ---
 
 <p class="eyebrow">The reality</p>
 
-# Scalability becomes<br>the problem.
+# Scalability becomes the problem.
 
 <div class="steps">
 <div><span class="step-number">01</span><h2>Performance</h2><p>More data exposes slow queries and repeated work.</p></div>
@@ -215,12 +216,12 @@ Bridge: spend some of that drafting speed on understanding the change before shi
 -->
 
 ---
-class: product
+class: product content title-long
 ---
 
 <p class="eyebrow">How to fix the trap</p>
 
-# Ship a change you can<br>explain, verify, and support.
+# Ship a change you can explain, verify, and support.
 
 <div class="steps">
 <div><span class="step-number">01</span><h2>Understand</h2><p>Trace dependencies, data, and trust boundaries.</p></div>
@@ -256,7 +257,7 @@ But a faster first draft is only one part of a team's workload.
 -->
 
 ---
-class: leadership
+class: leadership content
 ---
 
 <p class="eyebrow">The opportunity</p>
@@ -280,12 +281,12 @@ Bridge: a quicker prototype still leaves questions that need the team’s contex
 -->
 
 ---
-class: leadership
+class: leadership content
 ---
 
 <p class="eyebrow">The reality</p>
 
-# A demo leaves<br>the hard questions open.
+# A demo leaves the hard questions open.
 
 <div class="two-up">
 <div><h2>The dashboard works</h2><p>The chart renders.<br>The sample data looks right.<br>The idea is easy to show.</p></div>
@@ -323,12 +324,12 @@ Bridge: bring the prototype into a shared decision before turning it into a prom
 -->
 
 ---
-class: leadership
+class: leadership content
 ---
 
 <p class="eyebrow">How to fix the trap</p>
 
-# Bring a prototype.<br>Invite a decision.
+# Bring a prototype. Invite a decision.
 
 <div class="quote-strip">“Here’s what I tried. What am I missing?”</div>
 
@@ -362,7 +363,7 @@ The maintainer's attention is part of the system. So is the contributor's opport
 -->
 
 ---
-class: opensource
+class: opensource content
 ---
 
 <p class="eyebrow">The opportunity</p>
@@ -387,12 +388,12 @@ Bridge: that is what useful assistance can look like. In the maintainer's inbox,
 -->
 
 ---
-class: opensource
+class: opensource content
 ---
 
 <p class="eyebrow">The reality</p>
 
-# Sorting the inbox<br>becomes the work.
+# Sorting the inbox becomes the work.
 
 <div class="steps">
 <div><span class="step-number">01</span><h2>Signal</h2><p>Slop comments can look like useful feedback until you investigate.</p></div>
@@ -431,12 +432,12 @@ Bridge: in workflows that permit assistance, keep the evidence, ownership, and p
 -->
 
 ---
-class: opensource
+class: opensource content
 ---
 
 <p class="eyebrow">How to fix the trap</p>
 
-# Own the contribution.<br>Limit the access.
+# Own the contribution. Limit the access.
 
 <div class="steps">
 <div><span class="step-number">01</span><h2>Show evidence</h2><p>Small changes, a reproduction, and a checked test.</p></div>
@@ -477,12 +478,12 @@ Two separate responsibilities: factual accuracy and an honest voice. Smooth pros
 -->
 
 ---
-class: author
+class: author content
 ---
 
 <p class="eyebrow">The opportunity</p>
 
-# A useful question<br>can improve the draft.
+# A useful question can improve the draft.
 
 <div class="two-up">
 <div><h2>The draft</h2><p>“This function is faster.”</p><p><strong>A useful critique:</strong><br>“Faster on which inputs?”</p></div>
@@ -501,12 +502,12 @@ Bridge: feedback can help, but the next suggestion may be confidently wrong or s
 -->
 
 ---
-class: author
+class: author content title-long
 ---
 
 <p class="eyebrow">The reality</p>
 
-# Fluent prose can be wrong.<br>It can also sound unlike me.
+# Fluent prose can be wrong. It can also sound unlike me.
 
 <div class="two-up">
 <div><h2>Accuracy</h2><p>A citation that doesn’t support the claim.</p><p>A caveat that disappears in the rewrite.</p></div>
@@ -544,12 +545,12 @@ Bridge: define a role for feedback while keeping the evidence, conclusions, and 
 -->
 
 ---
-class: author
+class: author content
 ---
 
 <p class="eyebrow">How to fix the trap</p>
 
-# Invite a challenge.<br>Own the claim.
+# Invite a challenge. Own the claim.
 
 <div class="steps">
 <div><span class="step-number">01</span><h2>Challenge it</h2><p>Ask what’s missing or overstated.</p></div>
@@ -586,12 +587,12 @@ Excitement, ecological concern, care for artists, and fatigue can coexist.
 -->
 
 ---
-class: consumer
+class: consumer content title-long
 ---
 
 <p class="eyebrow">The opportunity</p>
 
-# Less friction.<br>More possibility.<br>A choice in the matter.
+# Less friction. More possibility. A choice in the matter.
 
 <p class="lead">Try a translation. Explore an idea.<br>Get help with an unfamiliar interface.</p>
 
@@ -607,12 +608,12 @@ Bridge: even a useful feature can leave me with more to learn and more choices t
 -->
 
 ---
-class: consumer
+class: consumer content
 ---
 
 <p class="eyebrow">The reality</p>
 
-# The help comes<br>with more decisions.
+# The help comes with more decisions.
 
 <div class="two-up">
 <div><h2>Another tool to learn</h2><p>When can I trust it?<br>What needs checking?<br>Where are the controls?</p></div>
@@ -650,12 +651,12 @@ Bridge: make the choice small enough to understand, and keep a usable way to dec
 -->
 
 ---
-class: consumer
+class: consumer content
 ---
 
 <p class="eyebrow">How to fix the trap</p>
 
-# Keep the choice.<br>Including opting out.
+# Keep the choice. Including opting out.
 
 <div class="steps">
 <div><span class="step-number">01</span><h2>Ask what</h2><p>What does this automate, and what must I check?</p></div>
@@ -674,12 +675,12 @@ Bridge: all five perspectives turn out to have someone else on the receiving end
 -->
 
 ---
-class: dark
+class: dark content title-long
 ---
 
 <p class="eyebrow">Across all five perspectives</p>
 
-# The output gets faster.<br>Responsibility stays with us.
+# The output gets faster. Responsibility stays with us.
 
 <div class="responsibilities">
 <span>Product engineer</span><strong>Understand the behavior.</strong>
@@ -700,6 +701,7 @@ OPTIONAL CUT: if running late, summarize these five responsibilities in 30 secon
 -->
 
 ---
+class: content
 ---
 
 <p class="eyebrow">Before the next “we should add AI”</p>
@@ -724,12 +726,12 @@ Let the audience pick one question they haven't been asking often enough.
 -->
 
 ---
-class: product
+class: product content title-extra-long
 ---
 
 <p class="eyebrow">One small next step</p>
 
-# Choose what helps.<br>Name a boundary.<br><span class="highlight">Share what you learned.</span>
+# Choose what helps. Name a boundary. <span class="highlight">Share what you learned.</span>
 
 <p class="lead">An experiment. A limit. Or a deliberate no.<br>The choice should be yours.</p>
 

@@ -21,6 +21,8 @@ This produces a static presentation in `dist/`. The portrait and font are local,
 
 Edit [slides.md](slides.md) for content and notes. The visual system lives in [style.css](style.css): warm paper, deep ink, five persona colors, overlapping perspective rings, and a sunset sign-off.
 
+Content slides use `class: content` for a single-line heading and consistent spacing above the body. Add `title-long` or `title-extra-long` for longer headings, and keep manual line breaks out of these titles. The numbered columns share the same starting position.
+
 ## Running order
 
 | Slides | Segment | Time | Clock |
