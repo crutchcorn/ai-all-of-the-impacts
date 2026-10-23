@@ -488,8 +488,6 @@ class: author content
 <div><h2>After checking the benchmark</h2><p>“This version ran faster on these inputs, in this benchmark.”</p><p>The narrower claim is easier to trust.</p></div>
 </div>
 
-<p class="source">Hypothetical editing example · The author checks the evidence and chooses the words.</p>
-
 <!--
 16:30–17:15 · 0:45
 Treat generated questions, outlines, or critiques as suggestions to inspect.
