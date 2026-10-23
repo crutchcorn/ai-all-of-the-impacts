@@ -445,8 +445,6 @@ class: opensource content
 <div><span class="step-number">03</span><h2>Scope access</h2><p>Limit credentials. Review external writes.</p></div>
 </div>
 
-<p class="source">Prompt-injection example: <a href="https://invariantlabs.ai/blog/mcp-github-vulnerability">Invariant Labs, GitHub MCP demonstration (2025)</a></p>
-
 <!--
 14:30–16:00 · 1:30
 The contributor owns the explanation. The maintainer sets the bar. Follow the project's policies, disclose assistance where required, and stay for follow-up. Unchecked patches and pasted replies impose work on the people receiving them.
