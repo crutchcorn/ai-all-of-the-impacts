@@ -167,7 +167,7 @@ class: product
 Hypothetical example: a product engineer wants to compare two ways of presenting validation errors. Generate throwaway prototypes, try them with a keyboard, and check whether users understand the messages.
 That is a useful feedback loop if we actually inspect what we get.
 PERSONAL STORY SLOT: replace or supplement this example with a real task where AI helped you explore. Name the task, what you checked, and what you kept. No time-saved number unless you have one.
-Bridge: getting a prototype is one kind of work. Understanding what it actually does is another.
+Bridge: the first version is only the start. What happens as the data, features, and number of users grow?
 -->
 
 ---
@@ -176,30 +176,23 @@ class: product
 
 <p class="eyebrow">The reality</p>
 
-# Generating code is fast.<br>Understanding it takes work.
+# Scalability becomes<br>the problem.
 
-<div class="code-example">
-<div role="group" aria-label="Illustrative code: an invoice is found only by its ID">
-
-```js
-function getInvoice(id) {
-  return db.find(id)
-}
-```
-
-</div>
-<div><h2>Whose invoice?</h2><p>A valid ID doesn’t prove the caller can access it.</p><p>The happy path doesn’t reveal the missing boundary.</p></div>
+<div class="steps">
+<div><span class="step-number">01</span><h2>Performance</h2><p>More data exposes slow queries and repeated work.</p></div>
+<div><span class="step-number">02</span><h2>Debugging</h2><p>Tangled dependencies make bugs harder for people and AI to trace.</p></div>
+<div><span class="step-number">03</span><h2>Security</h2><p>New paths can bypass checks or expose more data.</p></div>
 </div>
 
-<p class="bottom-note">A convincing demo still leaves questions to investigate.</p>
+<p class="bottom-note">The codebase can grow faster than our understanding of it.</p>
 
 <!--
 04:15–05:15 · 1:00
-Illustrative pseudocode, not an implementation or a vulnerability report. The example deliberately omits authorization. It could have been written by a person or a model.
-The lookup returns an invoice. Does the caller have access to it? A correct design might scope the query to the account or enforce authorization elsewhere; someone still needs to find and verify that boundary.
-That investigation takes context and attention even when generating the first version was quick. Tests can repeat the implementation's assumptions, so a passing test doesn't answer every question either.
-PERSONAL STORY SLOT: replace this hypothetical with a real task where a plausible implementation needed investigation. Keep it bounded; don't invent a failure rate.
-Bridge: when producing code feels easy and understanding it feels slow, it's tempting to skip the slow part.
+As the prototype grows in data, features, and users, there's more work to perform, more interactions to trace, and more paths that must enforce permissions.
+Hypothetical: an invoice screen works with a few records. Repeated database lookups become slow with more data. A bug spans fetching, caching, and rendering; a person or AI working from one file can miss the cause and add another patch. A new export endpoint needs the same account checks as the original screen.
+These are complexity risks, not an inevitable property of AI-written code. Generating more code doesn't automatically resolve them, and an AI assistant still needs relevant context and evidence to debug them.
+PERSONAL STORY SLOT: replace this hypothetical with a real example of a prototype becoming hard to maintain. Don't invent an incident or a performance statistic.
+Bridge: when tracing the growing system feels slower than generating another patch, it's tempting to let AI handle code I no longer understand.
 -->
 
 ---
@@ -215,8 +208,8 @@ class: dark trap product
 <!--
 05:15–06:00 · 0:45
 This is a temptation to examine, not a quotation from a real person.
-The demo works and the tests pass. After seeing how much context a review needs, I might decide that understanding is optional and move on to the next feature.
-But somebody still has to trace the behavior when a different account reaches that invoice. Skipping the investigation can turn saved review time into an incident and lost trust.
+The codebase is getting harder to navigate. After seeing how much context debugging needs, I might ask AI for one more patch and decide that understanding is optional.
+But somebody still has to find the slow query, trace the interaction behind the bug, and verify that the new export can't expose another account's invoices. A patch that fixes one symptom may leave the underlying problem in place.
 Reading means building a model of data flow and failure modes; staring at every line is not itself a guarantee.
 Bridge: spend some of that drafting speed on understanding the change before shipping it.
 -->
@@ -230,14 +223,14 @@ class: product
 # Ship a change you can<br>explain, verify, and support.
 
 <div class="steps">
-<div><span class="step-number">01</span><h2>Understand</h2><p>Trace the data and the trust boundaries.</p></div>
-<div><span class="step-number">02</span><h2>Challenge</h2><p>Test a case that should be rejected.</p></div>
+<div><span class="step-number">01</span><h2>Understand</h2><p>Trace dependencies, data, and trust boundaries.</p></div>
+<div><span class="step-number">02</span><h2>Challenge</h2><p>Test realistic loads and requests that should fail.</p></div>
 <div><span class="step-number">03</span><h2>Own it</h2><p>Know how to detect and undo a bad rollout.</p></div>
 </div>
 
 <!--
 06:00–07:00 · 1:00
-Return to the invoice: try a different account, verify the authorization boundary, and check the behavior independently of generated tests.
+Return to the invoice screen: profile it with realistic data, isolate a small reproduction of the bug, and trace the affected dependencies before accepting another patch. Test the export with a different account and verify the authorization boundary independently of generated tests.
 If the change is too large to explain, split it. If the domain is unfamiliar, involve someone who knows it. Use some of the saved drafting time for that understanding.
 GitHub's responsible-use guidance also calls for verification and human review: https://docs.github.com/en/copilot/responsible-use/agents#7-limitations
 Bridge: now imagine watching that engineer from the manager's seat. The speed is exciting there too.
